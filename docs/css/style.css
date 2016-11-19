@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+.forms {
+    text-align: center;
+}
+
 .login {
     width: 350px;
     position: absolute;
@@ -68,13 +72,18 @@ label {
 input[type="submit"] {
     background: #1FCE6D;
     border: 0;
-    width: 350px;
+    width: 250px;
     height: 40px;
     border-radius: 3px;
     color: #fff;
     font-size: 22px;
     font-weight: 700;
     cursor: pointer;
+    position: absolute;
+    margin: auto;
+    margin-top: 30px;
+    left: 0;
+    right: 0;
     transition: background 0.3s ease-in-out;
 }
 

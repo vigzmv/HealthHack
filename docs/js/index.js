@@ -13,18 +13,19 @@ $(document).ready(function() {
 
         selected = $('.selLabel').text().trim();
         console.log(selected);
+        $('.inputform1').slideUp('slow');
+        $('.inputform2').slideUp('slow');
+        $('.inputform3').slideUp('slow');
+        $('.inputform4').slideUp('slow');
+
         if (selected == "Liver") {
             $('.inputform1').slideDown('slow');
-            $('.inputform2').slideUp('slow');
-            $('.inputform3').slideUp('slow');
         } else if (selected == "Heart") {
-            $('.inputform1').slideUp('slow');
             $('.inputform2').slideDown('slow');
-            $('.inputform3').slideUp('slow');
         } else if (selected == "Lungs") {
-            $('.inputform1').slideUp('slow');
-            $('.inputform2').slideUp('slow');
             $('.inputform3').slideDown('slow');
+        } else if (selected == "Others") {
+            $('.inputform4').slideDown('slow');
         }
     });
 
