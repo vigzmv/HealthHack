@@ -7,6 +7,7 @@
     <title>Me theek hoon kya?</title>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -16,7 +17,31 @@
     <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
     <div class='login'>
 
-        <h2>Select Your Bimari</h2>
+        <h2 id="select-heading">Select Your Bimari</h2>
+        <div class="container">
+            <div class="selected-item">
+                <p>You Selected Bimari : <span>None</span></p>
+            </div>
+
+            <div class="dropdown">
+                <span class="selLabel">Bimari List</span>
+                <input type="hidden" name="cd-dropdown">
+                <ul class="dropdown-list">
+                    <li data-value="1">
+                        <span>Liver</span>
+                    </li>
+                    <li data-value="2">
+                        <span>Heart</span>
+                    </li>
+                    <li data-value="3">
+                        <span>Lungs</span>
+                    </li>
+                    <li data-value="4">
+                        <span>Others</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div class="inputform" style="display:none">
             <h2>Register</h2>
@@ -31,7 +56,7 @@
             <!-- <a class='forgot' href='#'>Already have an account?</a> -->
         </div>
     </div>
-
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
 
 </body>
