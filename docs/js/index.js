@@ -17,6 +17,9 @@ $(document).ready(function() {
         $('.inputform2').slideUp('slow');
         $('.inputform3').slideUp('slow');
         $('.inputform4').slideUp('slow');
+        $('.strike').slideDown('slow');
+        $('.animated').slideDown('slow');
+        $('.form').slideDown('slow');
 
         if (selected == "Liver") {
             $('.inputform1').slideDown('slow');
@@ -29,4 +32,7 @@ $(document).ready(function() {
         }
     });
 
+});
+$("form").on("change", ".file-upload-field", function() {
+    $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
 });
