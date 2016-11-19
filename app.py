@@ -7,7 +7,9 @@ clf = model_liver()
 
 UPLOAD_FOLDER = os.getcwd()
 ALLOWED_EXTENSIONS = set(['pdf'])
-app = Flask(__name__)
+template_dir = os.getcwd()+'/docs/'
+
+app = Flask(__name__, template_folder=template_dir,static_folder="docs")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/',methods = ['GET','POST'])
