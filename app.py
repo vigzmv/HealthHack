@@ -27,6 +27,7 @@ def index():
 		try:
 			c = read_liver_pdf(path, file.filename)
 			os.remove('lft.pdf')
+
 			return str(clf.predict(c)[0])
 		except Exception as e:
 			return str(e)

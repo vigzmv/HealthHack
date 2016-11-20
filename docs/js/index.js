@@ -36,27 +36,3 @@ $(document).ready(function() {
 $("form").on("change", ".file-upload-field", function() {
     $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
 });
-
-function getresponse(){
-    $.ajax(
-	{
-	    type: 'POST',
-	    url: 'http://localhost:5000/',
-	    data: {text:query},
-	    success: function(data)
-	    {
-	        console.log(data);
-	        return data;
-	    },
-	    error: function()
-	    {
-			return "API RESPONSE is NULL"
-	    }
-	});
-}
-
-function pageLoad() {
-    document.getElementById("Send").addEventListener('click', getresponse, false);
-};
-
-window.addEventListener('load', pageLoad, false);

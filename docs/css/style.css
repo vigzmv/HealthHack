@@ -142,6 +142,10 @@ body {
     margin-bottom: 30px;
 }
 
+#Send{
+    margin-top: 20px;
+}
+
 .file-upload-wrapper {
     position: relative;
     width: 100%;
