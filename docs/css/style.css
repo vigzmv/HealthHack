@@ -135,6 +135,14 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+table {
+    margin: auto;
+}
+
+td {
+    padding: 4px;
+}
+
 .form {
     width: 250px;
     margin: auto;
@@ -142,7 +150,7 @@ body {
     margin-bottom: 30px;
 }
 
-#Send{
+#Send {
     margin-top: 20px;
 }
 

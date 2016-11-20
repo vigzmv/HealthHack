@@ -25,10 +25,10 @@ def index():
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 		path = os.path.join(app.config['UPLOAD_FOLDER'])
 		try:
-			c = read_liver_pdf(path, file.filename)
+			c ,dic = read_liver_pdf(path, file.filename)
 			os.remove('lft.pdf')
-
-			return str(clf.predict(c)[0])
+			result = str(clf.predict(c)[0])
+			return render_template('result.html',flag = result, dic = dic)
 		except Exception as e:
 			return str(e)
 		return request.form['firstname']

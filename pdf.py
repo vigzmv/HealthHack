@@ -32,7 +32,7 @@ def read_liver_pdf(path, filename):
     ldata = [data['age'],data['gender'],data['tb'],data['db'],data['alkphos'],data['sgpt'],data['sgot'], data['tp'],data['albumin'],data['a/g']]
     os.remove('output.txt')
     data = {k: float(v) for k, v in data.items()}
-    return ldata
+    return ldata,data
 
 def read_kidney_pdf(path, filename):
     dirs = "gs -sDEVICE=txtwrite -o "+"output.txt "+os.getcwd()+"/"+filename

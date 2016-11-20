@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health-Check | Result</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+    <div class='login'>
+        <h2 id="select-heading"></h2>
+
+        <table style="text-align:center;margin:auto">
+            <tr>
+                <th><strong>Legends</th><th>data</strong></th>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>{{ dic.age }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td> {{ dic.gender }}</td>
+            </tr>
+            <tr>
+
+                <td>Total Bilirubin</td>
+                <td>{{ dic.tb }}</td>
+            </tr>
+            <tr>
+                <td>Direct Bilirubin</td>
+                <td>{{ dic.db }}</td>
+            </tr>
+            <tr>
+                <td>Alkaline Phosphorous</td>
+                <td>{{ dic.alkphos }}</td>
+            </tr>
+            <tr>
+                <td>SGPT</td>
+                <td>{{ dic.sgpt }}</td>
+            </tr>
+            <tr>
+                <td>SGOT</td>
+                <td>{{ dic.sgot }}</td>
+            </tr>
+            <tr>
+                <td>Total Protein</td>
+                <td>{{ dic.tp }}</td>
+            </tr>
+            <tr>
+                <td>Albumin</td>
+                <td>{{ dic.albumin }}</td>
+            </tr>
+            <tr>
+                <td>A/G Ratio </td>
+                <td>{{ dic['a/g'] }}</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $('#select-heading').css('font-size', "5.5em");
+        if ({{flag}} == 1) {
+            $('#select-heading').text("Result Positive")
+        } else {
+            $('#select-heading').text("Result Negative");
+        }
+    </script>
+
+</body>
+
+</html>
